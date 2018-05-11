@@ -1,5 +1,7 @@
 /*global $*/
-/*! copyright (c)2018 Conan Ablewhite */
+/*! Bootstrap scrollable tabs
+    http://www.github.com/ablewhite/bootstrap-scrollable-tabs
+    Copyright (c)2018 Conan Ablewhite */
 "use strict";
 
 function scrollTabs($tabs, offset) {

@@ -3,7 +3,9 @@ var gulp = require('gulp'),
     path = require('path'),
     autoprefixer = require('gulp-autoprefixer'),
     cssnano = require('gulp-cssnano'),
+    minify = require('gulp-minify'),
     rename = require('gulp-rename'),
+    //sourcemaps = require('gulp-sourcemaps'),
     del = require('del');
 
 gulp.task('clean', function() {
@@ -17,19 +19,29 @@ gulp.task('less', function () {
         }))
         .pipe(autoprefixer())
         .pipe(gulp.dest('dist/css'))
-        .pipe(rename({suffix: '.min'}))
+        //.pipe(sourcemaps.init())
         .pipe(cssnano())
+        //.pipe(sourcemaps.write('.'))
+        .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('script', function() {
+    return gulp.src('./js/*.js')
+        .pipe(minify({
+            exclude: ['vendor'],
+            preserveComments: 'some'
+        }))
+        .pipe(gulp.dest('dist/js'))
 });
 
 gulp.task('copy', function () {
     return gulp.src([
         './*.html',
-        //'./css/**',
         './js/**'
     ],  {base: '.'})
         .pipe(gulp.dest('./dist'));});
 
 gulp.task('default', ['clean'], function() {
-    gulp.start('less', 'copy');
+    gulp.start('less', 'script', 'copy');
 });
