@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Bootstrap 4 scrollable tabs demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+    <!-- for demo purposes only -->
+    <link rel="stylesheet" href="css/demo.css">
+
+    <link rel="stylesheet" href="css/bootstrap-scrollable-tabs.css">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser.
+    Please <a href="https://browsehappy.com/" target="_blank" rel="noopener">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<div class="demo">
+    <ul id="scroll_test" class="nav nav-tabs scrollable" role="tablist">
+        <li role="presentation" class="nav-item">
+            <a href="#home" class="nav-link active" aria-controls="home" role="tab" data-toggle="tab">
+                <span class="fas fa-fw fa-home"></span> Home
+            </a>
+        </li>
+        <li role="presentation" class="nav-item">
+            <a href="#profile" class="nav-link" aria-controls="profile" role="tab" data-toggle="tab">
+                <span class="fas fa-fw fa-user"></span> Profile
+            </a>
+        </li>
+        <li role="presentation" class="nav-item">
+            <a href="#messages" class="nav-link" aria-controls="messages" role="tab" data-toggle="tab">
+                <span class="fas fa-fw fa-comment"></span> Messages
+            </a>
+        </li>
+        <li role="presentation" class="nav-item">
+            <a href="#settings" class="nav-link" aria-controls="settings" role="tab" data-toggle="tab">
+                <span class="fas fa-fw fa-cog"></span> Settings
+            </a>
+        </li>
+        <li role="presentation" class="nav-item">
+            <a href="#other1" class="nav-link" aria-controls="other1" role="tab" data-toggle="tab">
+                <span class="fas fa-fw fa-star"></span> Other 1
+            </a>
+        </li>
+        <li role="presentation" class="nav-item">
+            <a href="#other2" class="nav-link" aria-controls="other2" role="tab" data-toggle="tab">
+                <span class="fas fa-fw fa-star"></span> Other 2
+            </a>
+        </li>
+        <li role="presentation" class="nav-item">
+            <a href="#other3" class="nav-link" aria-controls="other3" role="tab" data-toggle="tab">
+                <span class="fas fa-fw fa-star"></span> Other 3
+            </a>
+        </li>
+        <li role="presentation" class="nav-item">
+            <a href="#other4" class="nav-link" aria-controls="other4" role="tab" data-toggle="tab">
+                <span class="fas fa-fw fa-star"></span> Other 4
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">home</div>
+        <div role="tabpanel" class="tab-pane" id="profile">profile</div>
+        <div role="tabpanel" class="tab-pane" id="messages">messages</div>
+        <div role="tabpanel" class="tab-pane" id="settings">settings</div>
+        <div role="tabpanel" class="tab-pane" id="other1">other1</div>
+        <div role="tabpanel" class="tab-pane" id="other2">other2</div>
+        <div role="tabpanel" class="tab-pane" id="other3">other3</div>
+        <div role="tabpanel" class="tab-pane" id="other4">other4</div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+<script src="js/bootstrap-scrollable-tabs.js"></script>
+</body>
+</html>

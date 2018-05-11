@@ -1,0 +1,83 @@
+/*! copyright (c)2018 Conan Ablewhite */
+.nav-tabs.scrollable {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: 0;
+
+  // leave spacing for scroll buttons
+  margin: 0 2em;
+
+  &.no-scroll {
+    margin: 0;
+  }
+
+  // LI for Bootstrap 3, .nav-item for Bootstrap 4
+  > li,
+  > .nav-item {
+    // prevent tab text wrapping
+    flex-shrink: 0;
+
+    // ensure active tab remains visible, even when scrolled
+    &.active {
+      position: -webkit-sticky;
+      position: sticky;
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+  }
+
+}
+
+.scrollable-wrapper {
+  position: relative;
+
+  .scroll-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    // .fa for FontAwesome v4
+    // .fas for FontAwesome v5
+    &:hover .fa::before,
+    &:hover .fas::before {
+      content: "\f0d9" !important;
+    }
+
+  }
+
+  .scroll-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    // .fa for FontAwesome v4
+    // .fas for FontAwesome v5
+    &:hover .fa::before,
+    &:hover .fas::before {
+      content: "\f0da" !important;
+    }
+
+  }
+
+  .scroll-left,
+  .scroll-right {
+    height: 100%;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    text-decoration: none;
+  }
+
+}
+
+.scrollable-wrapper + .tab-content,
+.nav-tabs.scrollable + .tab-content {
+  border-top: 1px solid #ddd;
+  margin-top: -1px;
+  padding: 1em;
+}
