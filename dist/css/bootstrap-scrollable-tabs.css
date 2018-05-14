@@ -1,4 +1,4 @@
-/*! Bootstrap scrollable tabs
+/*! Bootstrap scrollable tabs v1.0.0
     http://www.github.com/ablewhite/bootstrap-scrollable-tabs
     Copyright (c)2018 Conan Ablewhite */
 .nav-tabs.scrollable {
@@ -9,6 +9,7 @@
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   border-bottom: 0;
+  -webkit-overflow-scrolling: touch;
   margin: 0 2em;
 }
 .nav-tabs.scrollable.no-scroll {

@@ -1,5 +1,5 @@
 /*global $*/
-/*! Bootstrap scrollable tabs
+/*! Bootstrap scrollable tabs v1.0.0
     http://www.github.com/ablewhite/bootstrap-scrollable-tabs
     Copyright (c)2018 Conan Ablewhite */
 "use strict";
@@ -115,7 +115,8 @@ $(function() {
         $left.append(leftSpan);
         $wrapper.before(left);
 
-        $left.on("click", function () {
+        $left.on("click", function (e) {
+            e.preventDefault();
             scrollTabs($tabs, -1);
         });
 
@@ -133,7 +134,8 @@ $(function() {
         $right.append(rightSpan);
         $wrapper.after(right);
 
-        $right.on("click", function () {
+        $right.on("click", function (e) {
+            e.preventDefault();
             scrollTabs($tabs, 1);
         });
 
