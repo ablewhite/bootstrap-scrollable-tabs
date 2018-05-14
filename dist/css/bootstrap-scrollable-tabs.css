@@ -28,6 +28,11 @@
   right: 0;
   z-index: 10;
 }
+@supports (-webkit-overflow-scrolling: touch) {
+  .nav-tabs.scrollable {
+    overflow-x: scroll;
+  }
+}
 .scrollable-wrapper {
   position: relative;
 }
