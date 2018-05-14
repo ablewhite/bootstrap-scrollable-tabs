@@ -34,6 +34,13 @@
 
 }
 
+@supports (-webkit-overflow-scrolling: touch) {
+  .nav-tabs.scrollable {
+    // otherwise smooth scrolling won't work on touch devices
+    overflow-x: scroll;
+  }
+}
+
 .scrollable-wrapper {
   position: relative;
 
